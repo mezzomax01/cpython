@@ -19,8 +19,28 @@
         "cells": [
           {
             "position": {
-              "x": 510,
-              "y": 320
+              "x": 419.99999999999955,
+              "y": 170.00000000000057
+            },
+            "size": {
+              "width": 260,
+              "height": 240
+            },
+            "shape": "trust-boundary-box",
+            "id": "f0f2604b-2de0-4f21-92f6-1a5f7dda2d9f",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 519.9999999999995,
+              "y": 260.00000000000057
             },
             "size": {
               "width": 60,
