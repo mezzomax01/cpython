@@ -19,16 +19,16 @@
         "cells": [
           {
             "position": {
-              "x": 419.99999999999955,
-              "y": 170.00000000000057
+              "x": 419.9999999999993,
+              "y": 170.0000000000009
             },
             "size": {
-              "width": 260,
-              "height": 240
+              "width": 360,
+              "height": 270
             },
             "shape": "trust-boundary-box",
-            "id": "f0f2604b-2de0-4f21-92f6-1a5f7dda2d9f",
             "zIndex": -1,
+            "id": "f0f2604b-2de0-4f21-92f6-1a5f7dda2d9f",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "Trust Boundary",
@@ -39,14 +39,17 @@
           },
           {
             "position": {
-              "x": 519.9999999999995,
-              "y": 260.00000000000057
+              "x": 479.99999999999955,
+              "y": 275.0000000000009
             },
             "size": {
-              "width": 60,
-              "height": 60
+              "width": 90,
+              "height": 90
             },
             "attrs": {
+              "text": {
+                "text": "Data Crunch"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -59,7 +62,7 @@
             "id": "3b374214-f0a9-496b-9b73-181ad42bba72",
             "data": {
               "type": "tm.Flow",
-              "name": "Process",
+              "name": "Data Crunch",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -82,9 +85,12 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "PLC"
+              },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -94,18 +100,106 @@
             "id": "e5d61e50-e6b5-4109-8302-baf4c495be2f",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "PLC",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "providesAuthentication": false,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "d9c44296-4660-4a69-84a1-8058bfff587c",
+                  "title": "tampering",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "aad312d7-bc77-4111-9baf-47df3732515e",
+                  "title": "info dis",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "f8977a88-5810-41e1-8f46-1c33395b31e9",
+                  "title": "dos",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
               "isPublicNetwork": false
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "IO Data",
+              "description": "test",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "9a435174-7258-4f86-b923-93c8db8e9976",
+            "source": {
+              "cell": "e5d61e50-e6b5-4109-8302-baf4c495be2f"
+            },
+            "target": {
+              "cell": "3b374214-f0a9-496b-9b73-181ad42bba72"
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 293
+              }
+            ],
+            "labels": [
+              "IO Data"
+            ]
           },
           {
             "shape": "flow",
@@ -138,25 +232,62 @@
               "hasOpenThreats": false,
               "threats": []
             },
-            "id": "9a435174-7258-4f86-b923-93c8db8e9976",
+            "id": "62e450cb-e11e-4c3a-97ec-7bb047db9002",
             "source": {
-              "cell": "e5d61e50-e6b5-4109-8302-baf4c495be2f"
+              "cell": "7e74ed62-62bc-4759-80fd-496d43998781"
             },
             "target": {
               "cell": "3b374214-f0a9-496b-9b73-181ad42bba72"
+            }
+          },
+          {
+            "position": {
+              "x": 620,
+              "y": 220
             },
-            "vertices": [
-              {
-                "x": 370,
-                "y": 293
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "EEPROM"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
               }
-            ]
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "7e74ed62-62bc-4759-80fd-496d43998781",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Flow",
+              "name": "EEPROM",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isPublicNetwork": false
+            }
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "otto",
-    "threatTop": 0
+    "threatTop": 11
   }
 }
